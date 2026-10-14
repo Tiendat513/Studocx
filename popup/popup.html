@@ -10,6 +10,21 @@
 
 <body>
   <div class="popup">
+    <!-- UPDATE NOTIFICATION BANNER (Tự động hiển thị khi GitHub có phiên bản mới) -->
+    <div class="update-banner" id="update-banner" hidden>
+      <div class="update-content">
+        <span class="update-pulse-dot"></span>
+        <span class="update-badge">UPDATE</span>
+        <span class="update-text" id="update-text">Đã có bản mới!</span>
+      </div>
+      <div class="update-actions">
+        <button type="button" class="update-download-btn" id="btn-update-download" title="Tải file ZIP mới nhất">
+          Tải ngay
+        </button>
+        <button type="button" class="update-dismiss-btn" id="btn-update-dismiss" title="Bỏ qua">✕</button>
+      </div>
+    </div>
+
     <!-- MAIN STAT HERO CARD -->
     <section class="hero-card" aria-label="Bảng điều khiển">
       <!-- Top Row: Icon + Big Stat + Reset Button -->

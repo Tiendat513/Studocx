@@ -209,6 +209,56 @@
     downloadOptionEls.forEach((button) => {
       button.addEventListener("click", () => runDownload(button.dataset.downloadMode));
     });
+
+    const isNewerVersion = (remote, current) => {
+      const r = remote.split(".").map((n) => Number.parseInt(n, 10) || 0);
+      const c = current.split(".").map((n) => Number.parseInt(n, 10) || 0);
+      for (let i = 0; i < Math.max(r.length, c.length); i++) {
+        const rVal = r[i] || 0;
+        const cVal = c[i] || 0;
+        if (rVal > cVal) return true;
+        if (rVal < cVal) return false;
+      }
+      return false;
+    };
+
+    // Kiểm tra bản cập nhật mới trên GitHub
+    const checkForUpdates = async () => {
+      try {
+        const GITHUB_REPO = "Tiendat513/Studocx";
+        const REMOTE_MANIFEST = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/manifest.json`;
+        const GITHUB_ZIP = `https://github.com/${GITHUB_REPO}/archive/refs/heads/main.zip`;
+
+        const currentVersion = chrome.runtime.getManifest()?.version || "1.0";
+        const res = await fetch(`${REMOTE_MANIFEST}?_t=${Date.now()}`, { cache: "no-store" });
+        if (!res.ok) return;
+
+        const data = await res.json();
+        const remoteVersion = data?.version;
+
+        if (remoteVersion && isNewerVersion(remoteVersion, currentVersion)) {
+          const bannerEl = getElement("update-banner");
+          const textEl = getElement("update-text");
+          const downloadBtn = getElement("btn-update-download");
+          const dismissBtn = getElement("btn-update-dismiss");
+
+          if (bannerEl && textEl) {
+            textEl.textContent = `Đã có bản mới v${remoteVersion}!`;
+            bannerEl.hidden = false;
+
+            downloadBtn?.addEventListener("click", () => {
+              chrome.tabs.create({ url: GITHUB_ZIP });
+            });
+
+            dismissBtn?.addEventListener("click", () => {
+              bannerEl.hidden = true;
+            });
+          }
+        }
+      } catch {}
+    };
+
+    void checkForUpdates();
   };
 
   void initPopup();

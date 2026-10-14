@@ -69,7 +69,7 @@ Tiện ích hỗ trợ hầu hết các trình duyệt dùng nhân Chromium (Goo
 
 ---
 
-## 🚀 Hướng Dẫn Sử Dụng
+## Hướng Dẫn Sử Dụng
 
 1. Đăng nhập vào tài khoản Studocu của bạn trên trình duyệt.
 2. Truy cập vào trang tải tài liệu lên:
@@ -95,7 +95,13 @@ Nguyên nhân thường do khi giải nén bị lồng 2 lớp thư mục cùng 
 <details>
 <summary><b>2. Khi có phiên bản mới thì cập nhật như thế nào?</b></summary>
 <br>
-Bạn chỉ cần tải file ZIP mới về, giải nén và chép đè vào thư mục cũ. Sau đó vào lại <code>chrome://extensions/</code> và bấm nút <b>Mũi tên xoay tròn (Tải lại / Reload)</b> trên thẻ của tiện ích Studocx là xong.
+Tiện ích được tích hợp <b>Hệ thống tự động kiểm tra cập nhật</b>:
+<ul>
+  <li>Khi có phiên bản mới trên GitHub, ngay trên popup của Studocx sẽ tự động xuất hiện banner thông báo màu xanh.</li>
+  <li><b>Cách 1 (Nhanh nhất trên Windows):</b> Nhấp đúp chuột vào file <code>update.bat</code> có sẵn trong thư mục extension. Script sẽ tự động tải bản mới nhất từ GitHub và cập nhật chỉ trong 2 giây!</li>
+  <li><b>Cách 2:</b> Bấm nút "Tải ngay" trên banner thông báo để tải file ZIP mới nhất, giải nén chép đè vào thư mục hiện tại.</li>
+</ul>
+Sau khi cập nhật, bạn chỉ cần vào <code>chrome://extensions/</code> và bấm nút <b>Mũi tên xoay tròn (Tải lại / Reload 🔄)</b> trên thẻ Studocx là hoàn tất!
 </details>
 
 ---
