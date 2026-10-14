@@ -518,6 +518,7 @@ input {
    BOTTOM SECONDARY CARD (Maintaining by: GoblinDex)
    ========================================================= */
 .footer-card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -538,4 +539,13 @@ input {
   color: #e4e4e7;
   font-weight: 700;
   letter-spacing: 0.01em;
+}
+
+.footer-version {
+  position: absolute;
+  right: 14px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #52525b;
+  letter-spacing: 0.02em;
 }

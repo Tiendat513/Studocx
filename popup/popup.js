@@ -29,6 +29,11 @@
     const progressBoxEl = getElement("progress-box");
     const progressBarEl = getElement("progress-bar");
     const statEl = getElement("status-text");
+    const versionEl = getElement("footer-version");
+    if (versionEl) {
+      const v = chrome.runtime.getManifest()?.version;
+      if (v) versionEl.textContent = `v${v}`;
+    }
 
     let settings = DEFAULTS;
 
