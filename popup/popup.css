@@ -1,0 +1,440 @@
+:root {
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #ededed;
+  background-color: #0d0d0f;
+  font: 450 13px/1.4 -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.popup {
+  width: 360px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* =========================================================
+   MAIN HERO CARD (Dark Stat Container)
+   ========================================================= */
+.hero-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 18px 16px;
+  background: #161619;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.5),
+    0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* --- Hero Header: Brand + Reset Button --- */
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+
+.hero-icon-box {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #212126;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 13px;
+  color: #f4f4f5;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+
+.crosshair-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.hero-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.hero-big-stat {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.hero-subtext {
+  color: #8e8e93;
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #a1a1aa;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.reset-btn:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #f87171;
+}
+
+.reset-icon {
+  width: 11px;
+  height: 11px;
+}
+
+/* --- Sliders Section (Dark Stat bar style) --- */
+.sliders-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 2px;
+}
+
+.slider-block {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.slider-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.slider-title {
+  color: #c4c4c7;
+  font-size: 12px;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+}
+
+.count-badge {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.slider-wrap {
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  height: 5px;
+  margin: 0;
+  border-radius: 999px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #27272d;
+  cursor: pointer;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border: 2.5px solid #161619;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.7);
+}
+
+.slider::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+  border: 2.5px solid #161619;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+}
+
+/* =========================================================
+   ACTION BUTTONS SECTION (Modern Dark Cards)
+   ========================================================= */
+.action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.action-btn {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 36px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 12px;
+  border-radius: 15px;
+  background: #161619;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: #ededed;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.btn-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #212126;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e4e4e7;
+}
+
+.btn-icon-wrapper svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+.fill-icon {
+  background: #272730;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.action-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.action-copy strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.action-copy small {
+  font-size: 11px;
+  font-weight: 450;
+  color: #8e8e93;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-arrow {
+  color: #52525b;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-arrow.chevron {
+  font-size: 12px;
+}
+
+/* Hover States */
+.action-btn:hover:not(:disabled) {
+  background: #1c1c20;
+  border-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.action-btn:hover:not(:disabled) .btn-arrow {
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+/* Button 2: Tự động điền - Subtle Hero Highlight */
+.action-btn-fill {
+  background: linear-gradient(135deg, #1a1a20, #17171c);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.action-btn-fill:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+.action-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.action-btn:disabled {
+  opacity: 0.45;
+  cursor: wait;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Download Dropdown Options */
+.download-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 12px;
+  background: #121215;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.download-options[hidden] {
+  display: none;
+}
+
+.download-option {
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #1b1b20;
+  color: #d4d4d8;
+  font-size: 11px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.14s ease;
+}
+
+.download-option:hover:not(:disabled) {
+  background: #25252d;
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.download-option:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+/* =========================================================
+   PROGRESS BOX
+   ========================================================= */
+.progress-box {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #161619;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.progress-box[hidden] {
+  display: none;
+}
+
+.progress-track {
+  height: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #27272d;
+}
+
+.progress-bar {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  transition: width 0.2s ease;
+}
+
+.stat-text {
+  color: #a1a1aa;
+  font-size: 11px;
+  font-weight: 550;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================================
+   BOTTOM SECONDARY CARD (Maintaining by: GoblinDex)
+   ========================================================= */
+.footer-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: #161619;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.footer-credit {
+  font-size: 11px;
+  font-weight: 500;
+  color: #71717a;
+  letter-spacing: -0.01em;
+}
+
+.author-name {
+  color: #e4e4e7;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}

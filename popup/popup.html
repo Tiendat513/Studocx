@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Studocu Premium Helper</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup">
+      <!-- MAIN STAT HERO CARD -->
+      <section class="hero-card" aria-label="Bảng điều khiển">
+        <!-- Top Row: Icon + Big Stat + Reset Button -->
+        <div class="hero-header">
+          <div class="hero-brand">
+            <div class="hero-icon-box">
+              <svg viewBox="0 0 24 24" class="crosshair-icon" aria-hidden="true">
+                <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8" />
+                <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8" />
+                <line x1="12" y1="1" x2="12" y2="5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <line x1="12" y1="19" x2="12" y2="23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <line x1="1" y1="12" x2="5" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                <line x1="19" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="hero-title-group">
+              <div class="hero-big-stat">PREMIUM+</div>
+              <div class="hero-subtext">Studocu Automation Engine</div>
+            </div>
+          </div>
+
+          <button type="button" class="reset-btn" id="btn-reset" title="Đặt cấu hình về mặc định">
+            <svg viewBox="0 0 24 24" class="reset-icon" aria-hidden="true">
+              <path d="M4 10a8 8 0 1 0 2.34-5.66L4 6.68" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M4 3v3.68h3.68" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Đặt lại</span>
+          </button>
+        </div>
+
+        <!-- Sliders section (Dark Stat retention bar style) -->
+        <div class="sliders-section">
+          <!-- Slider 1: Doc Count -->
+          <div class="slider-block">
+            <div class="slider-header-row">
+              <label for="doc-count" class="slider-title">Số lượng tài liệu</label>
+              <span class="count-badge" id="doc-count-badge">10 file</span>
+            </div>
+            <div class="slider-wrap">
+              <input type="range" id="doc-count" class="slider" min="1" max="30" value="10" />
+            </div>
+          </div>
+
+          <!-- Slider 2: Pages per file -->
+          <div class="slider-block">
+            <div class="slider-header-row">
+              <label for="pages-per-file" class="slider-title">Số trang mỗi file</label>
+              <span class="count-badge" id="pages-per-file-badge">10 trang</span>
+            </div>
+            <div class="slider-wrap">
+              <input type="range" id="pages-per-file" class="slider" min="1" max="50" value="10" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACTION BUTTONS SECTION -->
+      <section class="action-list" aria-label="Thao tác">
+        <!-- Button 1: Tự nạp các file -->
+        <button
+          type="button"
+          class="action-btn action-btn-primary"
+          id="btn-upload"
+        >
+          <div class="btn-icon-wrapper">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a1 1 0 0 1 .7.3l4 4a1 1 0 1 1-1.4 1.4L13 6.42V16a1 1 0 1 1-2 0V6.42L8.7 8.7a1 1 0 0 1-1.4-1.4l4-4A1 1 0 0 1 12 3ZM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z" />
+            </svg>
+          </div>
+          <span class="action-copy">
+            <strong>Tự nạp các file</strong>
+            <small>Tạo DOCX tự động & nạp vào trang tải lên</small>
+          </span>
+          <span class="btn-arrow">→</span>
+        </button>
+
+        <!-- Button 2: Tự động điền -->
+        <button
+          type="button"
+          class="action-btn action-btn-fill"
+          id="btn-fill"
+        >
+          <div class="btn-icon-wrapper fill-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m14.7 4.3 5 5a1 1 0 0 1 0 1.4l-9 9a1 1 0 0 1-.7.3H5a1 1 0 0 1-1-1v-5a1 1 0 0 1 .3-.7l9-9a1 1 0 0 1 1.4 0ZM6 14.42V18h3.58l8-8L14 6.42l-8 8ZM18 3a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0V7h-1a1 1 0 1 1 0-2h1V4a1 1 0 0 1 1-1Z" />
+            </svg>
+          </div>
+          <span class="action-copy">
+            <strong>Tự động điền form</strong>
+            <small>Ngẫu nhiên hóa trường, môn học & hoàn tất</small>
+          </span>
+          <span class="btn-arrow">→</span>
+        </button>
+
+        <!-- Button 3: Tải các file (dự phòng) -->
+        <button
+          type="button"
+          class="action-btn action-btn-tertiary"
+          id="btn-download"
+          aria-expanded="false"
+          aria-controls="download-options"
+        >
+          <div class="btn-icon-wrapper">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3a1 1 0 0 1 1 1v9.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.42l2.3 2.3V4a1 1 0 0 1 1-1ZM5 19a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H6a1 1 0 0 1-1-1Z" />
+            </svg>
+          </div>
+          <span class="action-copy">
+            <strong>Tải các file (dự phòng)</strong>
+            <small>Lưu DOCX về máy nếu muốn upload thủ công</small>
+          </span>
+          <span class="btn-arrow chevron">▾</span>
+        </button>
+
+        <!-- Menu chọn định dạng tải -->
+        <div class="download-options" id="download-options" hidden>
+          <button type="button" class="download-option" data-download-mode="files">
+            Tải lần lượt
+          </button>
+          <button type="button" class="download-option" data-download-mode="zip">
+            Tải file ZIP
+          </button>
+        </div>
+      </section>
+
+      <!-- Progress Section -->
+      <div class="progress-box" id="progress-box" hidden>
+        <div class="progress-track">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <span class="stat-text" id="status-text">Đang chuẩn bị...</span>
+      </div>
+
+      <!-- SECONDARY FOOTER CARD (Maintaining by: GoblinDex) -->
+      <div class="footer-card">
+        <span class="footer-credit">Maintaining by: <strong class="author-name">GoblinDex</strong></span>
+      </div>
+    </div>
+
+    <script src="../shared/docx-generator.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
