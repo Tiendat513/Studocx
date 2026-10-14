@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Studocu Premium Helper",
+  "name": "Studocx",
   "version": "1.0",
   "description": "Extension hỗ trợ tự động tạo và nạp tài liệu kích hoạt nhanh Studocu Premium",
-  "author": "nvbangg",
+  "author": "tiendat513",
 
   "permissions": ["storage"],
   "action": {
-    "default_title": "Studocu Premium Helper",
+    "default_title": "Studocx",
     "default_popup": "popup/popup.html"
   },
   "content_scripts": [

@@ -1,4 +1,4 @@
-# Studocu Helper
+# Studocx
 
 > [!NOTE]
 > Tiện ích hỗ trợ tự động tạo tài liệu DOCX hợp lệ và tự động điền form nạp tài liệu kích hoạt Studocu.
@@ -59,13 +59,13 @@ Tiện ích hỗ trợ hầu hết các trình duyệt dùng nhân Chromium (Goo
 2. Bấm vào nút **Tải tiện ích đã giải nén** (tiếng Anh là *Load unpacked*).
 3. Một cửa sổ chọn thư mục sẽ hiện ra: Bạn duyệt đến và **chọn đúng thư mục đã giải nén ở Bước 2**. Đảm bảo rằng đã hiện ra 3 thư mục **popup**, **content** và **shared**.
 4. Bấm nút **Select Folder** (hoặc *Chọn thư mục*).
-5. Lúc này thẻ tiện ích **Studocu Helper** sẽ xuất hiện trên danh sách tiện ích của bạn!
+5. Lúc này thẻ tiện ích **Studocx** sẽ xuất hiện trên danh sách tiện ích của bạn!
 
 ---
 
 ### Tips: Ghim tiện ích để thao tác nhanh
 1. Ở góc trên bên phải trình duyệt (cạnh thanh địa chỉ), bấm vào biểu tượng **Mảnh ghép (Puzzle icon)** 🧩.
-2. Tìm tiện ích **Studocu Helper** và bấm vào biểu tượng chiếc **Ghim (Pin)** 📌 để biểu tượng Studocu luôn hiển thị cố định trên thanh công cụ.
+2. Tìm tiện ích **Studocx** và bấm vào biểu tượng chiếc **Ghim (Pin)** 📌 để biểu tượng Studocx luôn hiển thị cố định trên thanh công cụ.
 
 ---
 
@@ -76,7 +76,7 @@ Tiện ích hỗ trợ hầu hết các trình duyệt dùng nhân Chromium (Goo
    ```text
    https://www.studocu.vn/vn/document/upload
    ```
-3. Bấm vào biểu tượng **Studocu Helper** trên thanh công cụ của trình duyệt:
+3. Bấm vào biểu tượng **Studocx** trên thanh công cụ của trình duyệt:
    - Kéo chọn **Số lượng file** mong muốn (khuyên dùng: 10 - 15 file).
    - Kéo chọn **Số trang mỗi file** (khuyên dùng: 5 - 10 trang).
 4. Bấm nút **"Tự nạp các file"**: Tiện ích sẽ tự tạo các file DOCX hợp lệ và nạp vào trang. Đợi trang chuyển sang bước điền thông tin.
@@ -95,7 +95,7 @@ Nguyên nhân thường do khi giải nén bị lồng 2 lớp thư mục cùng 
 <details>
 <summary><b>2. Khi có phiên bản mới thì cập nhật như thế nào?</b></summary>
 <br>
-Bạn chỉ cần tải file ZIP mới về, giải nén và chép đè vào thư mục cũ. Sau đó vào lại <code>chrome://extensions/</code> và bấm nút <b>Mũi tên xoay tròn (Tải lại / Reload)</b> trên thẻ của tiện ích Studocu Helper là xong.
+Bạn chỉ cần tải file ZIP mới về, giải nén và chép đè vào thư mục cũ. Sau đó vào lại <code>chrome://extensions/</code> và bấm nút <b>Mũi tên xoay tròn (Tải lại / Reload)</b> trên thẻ của tiện ích Studocx là xong.
 </details>
 
 ---
